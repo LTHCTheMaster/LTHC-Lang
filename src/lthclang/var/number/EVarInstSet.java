@@ -18,7 +18,7 @@ public class EVarInstSet
 		return this.eVar;
 	}
 
-	public String getDVarStr() {
+	public String getEVarStr() {
 		return Float.toString(getEVar());
 	}
 }

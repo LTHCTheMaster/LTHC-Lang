@@ -1447,6 +1447,1487 @@ public class Decomp
 				}
 			}
 			
+			//Unconditional Jump
+			if(this.inst.equalsIgnoreCase("jmp"))
+			{
+				index = Integer.parseInt(str.split(" ")[1]) - 2;
+			}
+			
+			//Conditional Jump: a=0
+			if(this.inst.equalsIgnoreCase("jmp0ea"))
+			{
+				if(variableA.getAVar() == 0.0)
+				{
+					index = Integer.parseInt(str.split(" ")[1]) - 2;
+				}
+			}
+			//Conditional Jump: b=0
+			if(this.inst.equalsIgnoreCase("jmp0eb"))
+			{
+				if(variableB.getBVar() == 0.0)
+				{
+					index = Integer.parseInt(str.split(" ")[1]) - 2;
+				}
+			}
+			//Conditional Jump: c=0
+			if(this.inst.equalsIgnoreCase("jmp0ec"))
+			{
+				if(variableC.getCVar() == 0.0)
+				{
+					index = Integer.parseInt(str.split(" ")[1]) - 2;
+				}
+			}
+			//Conditional Jump: d=0
+			if(this.inst.equalsIgnoreCase("jmp0ed"))
+			{
+				if(variableD.getDVar() == 0.0)
+				{
+					index = Integer.parseInt(str.split(" ")[1]) - 2;
+				}
+			}
+			//Conditional Jump:e=0
+			if(this.inst.equalsIgnoreCase("jmp0ee"))
+			{
+				if(variableE.getEVar() == 0.0)
+				{
+					index = Integer.parseInt(str.split(" ")[1]) - 2;
+				}
+			}
+			//Conditional Jump: f=0
+			if(this.inst.equalsIgnoreCase("jmp0ef"))
+			{
+				if(variableF.getFVar() == 0.0)
+				{
+					index = Integer.parseInt(str.split(" ")[1]) - 2;
+				}
+			}
+			
+			//Conditional Jump (Custom Condition
+			if(this.inst.equalsIgnoreCase("cjmp"))
+			{
+				if(str.split(" ")[1].equalsIgnoreCase("a"))
+				{
+					if(str.split(" ")[2].equalsIgnoreCase("="))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableA.getAVar() == variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableA.getAVar() == variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableA.getAVar() == variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableA.getAVar() == variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableA.getAVar() == variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase("!=") || str.split(" ")[2].equalsIgnoreCase("=!"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableA.getAVar() != variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableA.getAVar() != variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableA.getAVar() != variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableA.getAVar() != variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableA.getAVar() != variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase(">"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableA.getAVar() > variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableA.getAVar() > variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableA.getAVar() > variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableA.getAVar() > variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableA.getAVar() > variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase("<"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableA.getAVar() < variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableA.getAVar() < variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableA.getAVar() < variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableA.getAVar() < variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableA.getAVar() < variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase(">=") || str.split(" ")[2].equalsIgnoreCase("=>"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableA.getAVar() >= variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableA.getAVar() >= variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableA.getAVar() >= variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableA.getAVar() >= variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableA.getAVar() >= variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase("<=") || str.split(" ")[2].equalsIgnoreCase("=<"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableA.getAVar() <= variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableA.getAVar() <= variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableA.getAVar() <= variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableA.getAVar() <= variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableA.getAVar() <= variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+				}
+				
+				if(str.split(" ")[1].equalsIgnoreCase("b"))
+				{
+					if(str.split(" ")[2].equalsIgnoreCase("="))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableB.getBVar() == variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableB.getBVar() == variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableB.getBVar() == variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableB.getBVar() == variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableB.getBVar() == variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase("!=") || str.split(" ")[2].equalsIgnoreCase("=!"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableB.getBVar() != variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableB.getBVar() != variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableB.getBVar() != variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableB.getBVar() != variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableB.getBVar() != variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase(">"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableB.getBVar() > variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableB.getBVar() > variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableB.getBVar() > variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableB.getBVar() > variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableB.getBVar() > variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase("<"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableB.getBVar() < variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableB.getBVar() < variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableB.getBVar() < variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableB.getBVar() < variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableB.getBVar() < variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase(">=") || str.split(" ")[2].equalsIgnoreCase("=>"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableB.getBVar() >= variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableB.getBVar() >= variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableB.getBVar() >= variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableB.getBVar() >= variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableB.getBVar() >= variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase("<=") || str.split(" ")[2].equalsIgnoreCase("=<"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableB.getBVar() <= variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableB.getBVar() <= variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableB.getBVar() <= variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableB.getBVar() <= variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableB.getBVar() <= variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+				}
+				
+				if(str.split(" ")[1].equalsIgnoreCase("c"))
+				{
+					if(str.split(" ")[2].equalsIgnoreCase("="))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableC.getCVar() == variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableC.getCVar() == variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableC.getCVar() == variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableC.getCVar() == variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableC.getCVar() == variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase("!=") || str.split(" ")[2].equalsIgnoreCase("=!"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableC.getCVar() != variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableC.getCVar() != variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableC.getCVar() != variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableC.getCVar() != variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableC.getCVar() != variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase(">"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableC.getCVar() > variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableC.getCVar() > variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableC.getCVar() > variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableC.getCVar() > variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableC.getCVar() > variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase("<"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableC.getCVar() < variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableC.getCVar() < variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableC.getCVar() < variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableC.getCVar() < variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableC.getCVar() < variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase(">=") || str.split(" ")[2].equalsIgnoreCase("=>"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableC.getCVar() >= variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableC.getCVar() >= variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableC.getCVar() >= variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableC.getCVar() >= variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableC.getCVar() >= variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase("<=") || str.split(" ")[2].equalsIgnoreCase("=<"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableC.getCVar() <= variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableC.getCVar() <= variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableC.getCVar() <= variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableC.getCVar() <= variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableC.getCVar() <= variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+				}
+				
+				if(str.split(" ")[1].equalsIgnoreCase("d"))
+				{
+					if(str.split(" ")[2].equalsIgnoreCase("="))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableD.getDVar() == variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableD.getDVar() == variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableD.getDVar() == variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableD.getDVar() == variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableD.getDVar() == variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase("!=") || str.split(" ")[2].equalsIgnoreCase("=!"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableD.getDVar() != variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableD.getDVar() != variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableD.getDVar() != variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableD.getDVar() != variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableD.getDVar() != variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase(">"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableD.getDVar() > variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableD.getDVar() > variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableD.getDVar() > variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableD.getDVar() > variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableD.getDVar() > variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase("<"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableD.getDVar() < variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableD.getDVar() < variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableD.getDVar() < variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableD.getDVar() < variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableD.getDVar() < variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase(">=") || str.split(" ")[2].equalsIgnoreCase("=>"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableD.getDVar() >= variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableD.getDVar() >= variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableD.getDVar() >= variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableD.getDVar() >= variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableD.getDVar() >= variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase("<=") || str.split(" ")[2].equalsIgnoreCase("=<"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableD.getDVar() <= variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableD.getDVar() <= variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableD.getDVar() <= variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableD.getDVar() <= variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableD.getDVar() <= variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+				}
+				
+				if(str.split(" ")[1].equalsIgnoreCase("e"))
+				{
+					if(str.split(" ")[2].equalsIgnoreCase("="))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableE.getEVar() == variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableE.getEVar() == variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableE.getEVar() == variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableE.getEVar() == variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableE.getEVar() == variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase("!=") || str.split(" ")[2].equalsIgnoreCase("=!"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableE.getEVar() != variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableE.getEVar() != variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableE.getEVar() != variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableE.getEVar() != variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableE.getEVar() != variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase(">"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableE.getEVar() > variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableE.getEVar() > variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableE.getEVar() > variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableE.getEVar() > variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableE.getEVar() > variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase("<"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableE.getEVar() < variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableE.getEVar() < variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableE.getEVar() < variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableE.getEVar() < variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableE.getEVar() < variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase(">=") || str.split(" ")[2].equalsIgnoreCase("=>"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableE.getEVar() >= variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableE.getEVar() >= variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableE.getEVar() >= variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableE.getEVar() >= variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableE.getEVar() >= variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase("<=") || str.split(" ")[2].equalsIgnoreCase("=<"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableE.getEVar() <= variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableE.getEVar() <= variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableE.getEVar() <= variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableE.getEVar() <= variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("f"))
+						{
+							if(variableE.getEVar() <= variableF.getFVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+				}
+				
+				if(str.split(" ")[1].equalsIgnoreCase("f"))
+				{
+					if(str.split(" ")[2].equalsIgnoreCase("="))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableF.getFVar() == variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableF.getFVar() == variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableF.getFVar() == variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableF.getFVar() == variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableF.getFVar() == variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase("!=") || str.split(" ")[2].equalsIgnoreCase("=!"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableF.getFVar() != variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableF.getFVar() != variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableF.getFVar() != variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableF.getFVar() != variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableF.getFVar() != variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase(">"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableF.getFVar() > variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableF.getFVar() > variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableF.getFVar() > variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableF.getFVar() > variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableF.getFVar() > variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase("<"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableF.getFVar() < variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableF.getFVar() < variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableF.getFVar() < variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableF.getFVar() < variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableF.getFVar() < variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase(">=") || str.split(" ")[2].equalsIgnoreCase("=>"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableF.getFVar() >= variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableF.getFVar() >= variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableF.getFVar() >= variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableF.getFVar() >= variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableF.getFVar() >= variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+					
+					if(str.split(" ")[2].equalsIgnoreCase("<=") || str.split(" ")[2].equalsIgnoreCase("=<"))
+					{
+						if(str.split(" ")[3].equalsIgnoreCase("a"))
+						{
+							if(variableF.getFVar() <= variableA.getAVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("b"))
+						{
+							if(variableF.getFVar() <= variableB.getBVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("c"))
+						{
+							if(variableF.getFVar() <= variableC.getCVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("d"))
+						{
+							if(variableF.getFVar() <= variableD.getDVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+						if(str.split(" ")[3].equalsIgnoreCase("e"))
+						{
+							if(variableF.getFVar() <= variableE.getEVar())
+							{
+								index = Integer.parseInt(str.split(" ")[4]) - 2;
+							}
+						}
+					}
+				}
+			}
+			
 			index++;
 		}
 	}
