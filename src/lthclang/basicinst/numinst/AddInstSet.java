@@ -6,8 +6,8 @@ public class AddInstSet
 		// TODO Auto-generated constructor stub
 	}
 	
-	public float addNumVar(float var1, float var2)
+	public float addNumVar(float a, float b)
 	{
-		return var1 + var2;
+		return a + b;
 	}
 }
