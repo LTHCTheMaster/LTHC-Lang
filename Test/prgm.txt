@@ -1,1 +1,12 @@
-print Hello World
+var vitrine 0
+var estimation 0
+arand vitrine 10000 40000
+mfinput estimation Entrer votre estimation
+cjmp estimation > vitrine 8
+cjmp estimation < vitrine 10
+cjmp estimation = vitrine 12
+print moins
+jmp 4
+print plus
+jmp 4
+print victoire

@@ -11,6 +11,7 @@ import lthclang.basicinst.numinst.FloatInputInstSet;
 import lthclang.basicinst.numinst.ModInstSet;
 import lthclang.basicinst.numinst.SubInstSet;
 import lthclang.basicinst.numinst.MultInstSet;
+import lthclang.basicinst.numinst.RandomInstSet;
 import lthclang.basicinst.strinst.StrAddInstSet;
 import lthclang.basicinst.strinst.StrInputInstSet;
 import lthclang.var.number.Var;
@@ -31,6 +32,7 @@ public class Decomp
 	private ModInstSet modFunc = new ModInstSet();
 	private EDivInstSet eDivFunc = new EDivInstSet();
 	private StrAddInstSet strAddFunc = new StrAddInstSet();
+	private RandomInstSet rand = new RandomInstSet();
 	
 	private List<Var> variable = new ArrayList<Var>();
 	private FloatInputInstSet floatIn = new FloatInputInstSet();
@@ -236,6 +238,42 @@ public class Decomp
 								}
 							}
 						}
+					}
+				}
+			}
+			
+			//Random Int Base
+			if(this.inst.equalsIgnoreCase("irand"))
+			{
+				for(Var var : variable)
+				{
+					if(str.split(" ")[1].equalsIgnoreCase(var.getName()))
+					{
+						var.setValue(rand.randomInt(Integer.parseInt(str.split(" ")[2])));
+					}
+				}
+			}
+			
+			//Random Int Base With Adjust
+			if(this.inst.equalsIgnoreCase("arand"))
+			{
+				for(Var var : variable)
+				{
+					if(str.split(" ")[1].equalsIgnoreCase(var.getName()))
+					{
+						var.setValue(rand.randomInt(Integer.parseInt(str.split(" ")[2]), Integer.parseInt(str.split(" ")[3])));
+					}
+				}
+			}
+			
+			//Random Float 
+			if(this.inst.equalsIgnoreCase("frand"))
+			{
+				for(Var var : variable)
+				{
+					if(str.split(" ")[1].equalsIgnoreCase(var.getName()))
+					{
+						var.setValue(rand.randomFloat());
 					}
 				}
 			}
