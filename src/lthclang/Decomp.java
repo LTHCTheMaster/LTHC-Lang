@@ -12,6 +12,7 @@ import lthclang.basicinst.numinst.ModInstSet;
 import lthclang.basicinst.numinst.SubInstSet;
 import lthclang.basicinst.numinst.MultInstSet;
 import lthclang.basicinst.numinst.RandomInstSet;
+import lthclang.basicinst.strinst.RandomStrInstSet;
 import lthclang.basicinst.strinst.StrAddInstSet;
 import lthclang.basicinst.strinst.StrInputInstSet;
 import lthclang.var.number.Var;
@@ -39,6 +40,7 @@ public class Decomp
 	
 	private List<StrVar> strVariable = new ArrayList<StrVar>();
 	private StrInputInstSet strIn = new StrInputInstSet();
+	private RandomStrInstSet strRand = new RandomStrInstSet();
 	
 	public void executerMethod()
 	{
@@ -454,6 +456,30 @@ public class Decomp
 							inst2 += str.split(" ")[i] + "\n";
 						}
 						var.setValue(inst2);
+					}
+				}
+			}
+			
+			//Random Str
+			if(this.inst.equalsIgnoreCase("strrand"))
+			{
+				for(StrVar var : strVariable)
+				{
+					if(str.split(" ")[1].equalsIgnoreCase(var.getName()))
+					{
+						var.setValue(strRand.randStr());
+					}
+				}
+			}
+			
+			//Random Str with Size
+			if(this.inst.equalsIgnoreCase("sstrrand"))
+			{
+				for(StrVar var : strVariable)
+				{
+					if(str.split(" ")[1].equalsIgnoreCase(var.getName()))
+					{
+						var.setValue(strRand.sRandStr(Integer.parseInt(str.split(" ")[2])));
 					}
 				}
 			}
