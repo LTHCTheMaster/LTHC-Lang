@@ -1,2 +1,2 @@
 # LTHC-Lang
-My own programing langage
+LTHC Lang is a simply programming langage created with java
