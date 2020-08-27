@@ -1,0 +1,354 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset0 Courier New;}{\f2\fnil\fcharset0 Cambria Math;}{\f3\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red255\green0\blue0;\red155\green0\blue211;\red0\green176\blue80;\red0\green77\blue187;\red255\green192\blue0;\red0\green0\blue0;}
+{\*\generator Riched20 10.0.18362}{\*\mmathPr\mmathFont2\mwrapIndent1440 }\viewkind4\uc1 
+\pard\sl240\slmult1\qc\ul\b\f0\fs40\lang12 LTHC Lang - Documentation\ulnone\b0\par
+
+\pard\sl240\slmult1\f1\fs22\par
+ \par
+\par
+  \ul\b\fs28 English\par
+\ulnone\b0\fs22 Your program must be written in an \cf1 .lthclang \cf0 file and each new instruction must be on a new line\par
+When you run the interpreter, it will ask you for the path to your program file\par
+Java is required for run the interpreter\par
+\par
+\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1 Display a string in the output panel\par
+
+\pard\sl240\slmult1\tab\tab\cf2 print\cf0  \cf3 String\cf0\par
+\par
+Display\f2  \f1 a\f2  \f1 string\f2  \f1 where\f2  \f1 spaces\f2  \f1 are\f2  \f1 converted\f2  \f1 to\f2  \f1 newlines\f2  \f1 in\f2  \f1 the\f2  \f1 output\f2  \f1 panel\par
+\tab\cf2 printl\cf0  \cf3 String\cf0\par
+\par
+\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1 Create a variable by assigning it a numeric value\par
+
+\pard\sl240\slmult1\tab\tab\cf2 var\cf0  \cf1 varName\cf0  \cf3 value\cf0\par
+\par
+Put a value in an existing numeric type variable\par
+\tab\cf2 set\cf0  \cf1 varName\cf0  \cf3 value\cf0\par
+\par
+Display the content of a numeric variable\par
+\tab\cf2 printvar\cf0  \cf1 varName\cf0\par
+\par
+\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1 Create a string by assigning it a textual value\par
+
+\pard\sl240\slmult1\tab\tab\cf2 str\cf0  \cf1 varName\cf0  \cf3 string\cf0\par
+\par
+Create a string where spaces are converted to newlines by assigning a textual value to it\par
+\tab\cf2 strl\cf0  \cf1 varName\cf0  \cf3 string\par
+\par
+\cf0 Put a value of textual type in an existing string\par
+\tab\cf2 setstr\cf0  \cf1 varName\cf0  \cf3 string\cf0\par
+\par
+Put a value of textual type where spaces are converted to new line in an existing string\par
+\tab\cf2 setstrl\cf0  \cf1 varName\cf0  \cf3 string\par
+\par
+\cf0 Display the content of a character string\par
+\tab\cf2 printstr\cf0  \cf1 varName\par
+\cf0\par
+Concatenate two strings and store the result\par
+\tab\cf2 stradd\cf0  \cf1 storeVar\cf0  \cf3 aVarName\cf0  \cf4 bVarName\par
+\par
+\cf0 Store a string containing a single randomly generated character\par
+\tab\cf2 strrand\cf0  \cf1 storeVar\cf0\par
+\par
+Store a string containing a desired number of randomly generated characters\par
+\tab\cf2 sstrrand\cf0  \cf1 storeVar \cf3 numberOfCharacters\cf0\par
+\par
+\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1 Add two real numbers and store it in a real number variable\par
+
+\pard\sl240\slmult1\tab\tab\cf2 add\cf0  \cf1 storeVar\cf0  \cf3 aVarName\cf0  \cf4 bVarName\cf0\par
+\par
+Subtract two real numbers and store it in a real number variable\par
+\tab\cf2 sub\cf0  \cf1 storeVar\cf0  \cf3 aVarName\cf0  \cf4 bVarName\cf0\par
+\par
+Multiply two real numbers and store it in a real number variable\par
+\tab\cf2 mult\cf0  \cf1 storeVar\cf0  \cf3 aVarName\cf0  \cf4 bVarName\cf0\par
+\par
+Divide two real numbers and store it in a real number variable\par
+\tab\cf2 div\cf0  \cf1 storeVar\cf0  \cf3 aVarName\cf0  \cf4 bVarName\cf0\par
+\par
+Make the modulo of two real numbers and store it in a real number variable\par
+\tab\cf2 mod\cf0  \cf1 storeVar\cf0  \cf3 aVarName\cf0  \cf4 bVarName\cf0\par
+\par
+Make the quotient of the Euclidean division of two real numbers and store it in a real number variable\par
+\tab\cf2 ediv\cf0  \cf1 storeVar\cf0  \cf3 aVarName\cf0  \cf4 bVarName\par
+\par
+\par
+\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\cf0 Generate a random integer value between 0 and a limit and store it\par
+
+\pard\sl240\slmult1\tab\tab\cf2 irand\cf0  \cf1 var\cf0  \cf3 IntLimit\cf0\par
+\par
+Generate a random integer value between a threshold value and a limit value being equal to the desired value + the threshold and store it\par
+\tab\cf2 arand\cf0  \cf1 var\cf0  \cf3 IntThresold\cf0  \cf4 IntLimit\cf0\par
+\par
+Generate a random float value and store it\par
+\tab\cf2 frand\cf0  \cf1 var\cf0\par
+\par
+\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1 Ask the user to enter an real value\par
+
+\pard\sl240\slmult1\tab\tab\cf2 finput\cf0  \cf1 var\cf0\par
+\par
+Ask the user to enter a real value string with a custom message\par
+\tab\cf2 mfinput\cf0  \cf1 var \cf3 CustomMessage\cf0\par
+\par
+Ask the user to enter a string\par
+\tab\cf2 sinput\cf0  \cf1 var\cf0\par
+\par
+Ask the user to enter a string with a custom message\par
+\tab\cf2 msinput\cf0  \cf1 var \cf3 CustomMessage\cf0\par
+\par
+\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1 Make an unconditional jump to the line (first line of the program = line 1)\par
+
+\pard\sl240\slmult1\tab\tab\cf2 jmp\cf0  \cf1 line\cf0\par
+\par
+Make a conditional jump to the line [on the real values] (first line of the program = line 1)\par
+\tab\cf2 cjmp\cf0  \cf1 vara\cf0  \cf3 condition\cf0  \cf4 varb\cf0  \cf5 line\cf0\par
+\cf1\tab   \cf3 = | ! = | =! | <| > | <= | = <| > = | =>\cf0\par
+\par
+Make a conditional jump to the line [on the strings] (first line of the program = line 1)\par
+\tab\cf2 csjmp\cf0  \cf1 vara\cf0  \cf3 condition\cf0  \cf4 varb\cf0  \cf5 line\cf0\par
+\tab   \cf3 = | ! = | =!\cf0\par
+\par
+\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1 Convert a variable to a string and store it\par
+
+\pard\sl240\slmult1\tab\tab\cf2 vartostr\cf0  \cf1 variableToConvert\cf0  \cf3 variableOfStorage\cf0\par
+
+\pard\sl240\slmult1\par
+Convert a string into a variable and store it\par
+    \cf2 strtovar\cf0  \cf1 variableOfStorage\cf0  \cf3 variableToConvert\cf0\par
+\par
+\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1 Create multiple real number variables in parallel\par
+
+\pard\sl240\slmult1\tab\tab\cf2 pvar\cf0  \cf1 Var1\cf0  \cf3 Var2\cf0  \cf2 =\cf0  \cf1 Val1\cf0  \cf3 Val2\cf0\par
+\tab\tab\cf2 pvar\cf0  \cf1 Var1\cf0  \cf3 Var2 \cf4 Var3\cf0  \cf2 =\cf0  \cf1 Val1\cf0  \cf3 Val2\cf0  \cf4 Val3\cf0\par
+\tab\tab\cf2 pvar\cf0  \cf1 Var1\cf0  \cf3 Var2 \cf4 Var3 \cf5 Var4\cf0  \cf2 =\cf0  \cf1 Val1\cf0  \cf3 Val2 \cf4 Val3 \cf5 Val4\cf0\par
+\par
+Assign values \u8203?\u8203?in parallel to multiple real number variables\par
+\tab\cf2 pset\cf0  \cf1 Var1\cf0  \cf3 Var2\cf0  \cf2 =\cf0  \cf1 ValVarA\cf0  \cf3 ValVarB\cf0\par
+\tab\cf2 pset\cf0  \cf1 Var1\cf0  \cf3 Var2 \cf4 Var3 \cf2 =\cf0  \cf1 ValVarA\cf0  \cf3 ValVarB \cf4 ValVarC\cf0\par
+   \tab\cf2 pset\cf0  \cf1 Var1\cf0  \cf3 Var2 \cf4 Var3 \cf5 Var4 \cf2 =\cf0  \cf1 ValVarA\cf0  \cf3 ValVarB \cf4 ValVarC \cf5 ValVarD\cf0\par
+   \b Example\b0 : \cf2 pvar\cf0  \cf1 a\cf0  \cf3 b \cf4 c \cf2 =\cf0  \cf1 1\cf0  \cf3 2 \cf4 3\cf0\par
+   \tab\tab  \cf1 pset a \cf3 b \cf4 c\cf0  \cf2 =\cf0  \cf1 c\cf0  \cf3 a \cf4 b\cf0\par
+    \tab\b Result\b0 : \cf1 a = 3\cf0 ; \cf3 b = 1\cf0 ; \cf4 c = 2\cf0\par
+\par
+\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1 Create a list of real numbers\par
+
+\pard\sl240\slmult1\tab\tab\cf2 varlist\cf0  \cf1 listName\cf0  \cf3 valA valB valC val...\cf0\par
+\par
+Replace a real number type value with a value of the same type at a given point in a list\par
+\tab\cf2 varlistset\cf0  \cf1 ListName \cf3 index \cf4 Value\cf0\par
+   \tab   \cf3 index: the first value in the list is at index 0 (index = 0)\par
+\cf0\par
+Modify an existing list by changing the entire content\par
+\tab\cf2 varlistsetall\cf0  \cf1 listName \cf3 valA valB valC val...\cf0\par
+\par
+Add at the last position of an existing list a real value\par
+\tab\cf2 varlistadd \cf1 listName \cf3 value\cf0\par
+\par
+Get the size of a list and store this value in a variable\par
+\tab\cf2 varlistsize \cf1 listName \cf3 variableName\cf0\par
+\par
+Display the contents of a list\par
+\tab\cf2 printvarlist \cf1 listName\cf0\par
+\par
+\par
+\par
+\par
+\par
+   \ul\b\fs28 Fran\'e7ais\par
+\ulnone\b0\fs22\lang1036 Votre programme doit \'eatre \'e9crit dans dans un fichier en \cf1 .lthclang \cf0 et chaque nouvelle instruction doit \'eatre sur une nouvelle ligne\par
+\par
+Lorsque vous executer l'interpr\'e9teur, il vous demandera le chemin vers votre fichier programme\par
+Java est requis pour executer l'interpr\'e9teur\par
+\par
+\par
+\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1 Afficher une chaine de caract\'e8res dans le panneau de sortie\par
+
+\pard\sl240\slmult1\tab\tab\cf2 print\cf0  \cf3 ChaineDeCaract\'e8re\par
+\par
+\cf0 Afficher une chaine de caract\'e8res o\'f9 tous les espaces sont convertis en retour \'e0 la ligne dans le panneau de sortie\par
+\tab\tab\cf2 printl\cf0  \cf3 ChaineDeCaract\'e8re\cf0\par
+\par
+\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1 Cr\'e9er une variable en lui assignant une valeur num\'e9rique\par
+
+\pard\sl240\slmult1\tab\tab\cf2 var\cf0  \cf1 varName\cf0  \cf3 valeur\par
+\par
+\cf0 Mettre une valeur dans une variable de type num\'e9rique existante\par
+\tab\cf2 set\cf0  \cf1 varName\cf0  \cf3 valeur\par
+\par
+\cf0\lang12 Afficher le contenu d'une variable de type num\'e9rique\par
+\tab\cf2 printvar\cf0  \cf1 varName\cf0\par
+\cf3\lang1036\par
+\cf0\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1 Cr\'e9er une chaine de caract\'e8re en lui assignant une valeur de type textuel\par
+
+\pard\sl240\slmult1\tab\tab\cf2\lang12 str\cf0  \cf1 varName\cf0  \cf3 chaineDeCaract\'e8re\par
+\par
+\cf0\lang1036 Cr\'e9er une chaine de caract\'e8re o\'f9 les espaces sont convertis en retour \'e0 la ligne en lui assignant une valeur de type textuel\par
+\tab\cf2\lang12 strl\cf0  \cf1 varName\cf0  \cf3 chaineDeCaract\'e8re\par
+\par
+\cf0 Mettre une valeur de type textuel dans une chaine de caract\'e8re existante\par
+\tab\cf2 setstr\cf0  \cf1 varName\cf0  \cf3 chaineDeCaract\'e8re\par
+\par
+\cf0 Mettre une valeur de type textuel o\'f9 les espaces sont convertis en retour \'e0 la ligne dans une chaine de caract\'e8re existante\par
+\tab\cf2 setstrl\cf0  \cf1 varName\cf0  \cf3 chaineDeCaract\'e8re\par
+\par
+\cf0 Afficher le contenu d'une chaine de caract\'e8re\cf3\par
+\tab\cf2 printstr\cf0  \cf1 varName\cf3\par
+\par
+\cf0 Concat\'e9ner deux chaine de caract\'e8re et stocker le r\'e9sultat\par
+\tab\cf2 stradd\cf0  \cf1 storeVar\cf0  \cf3 aVarName\cf0  \cf4 bVarName\par
+\par
+\cf0 Stocker une chaine de caract\'e8re contenant un seul unique caract\'e8re g\'e9n\'e9r\'e9 al\'e9atoirement\cf3\par
+\cf2\tab strrand\cf0  \cf1 storeVar\par
+\par
+\cf0 Stocker une chaine de caract\'e8re contenant un nombre voulu de caract\'e8res g\'e9n\'e9r\'e9 al\'e9atoirement\par
+\tab\cf2 sstrrand\cf0  \cf1 storeVar \cf3 nombreDeCaract\'e8res\par
+\par
+\par
+\cf1\par
+\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\cf0 Faire l'addition de deux nombres r\'e9els et la stocker dans une variable de type nombre r\'e9el\par
+
+\pard\sl240\slmult1\tab\tab\cf2 add\cf0  \cf1 storeVar\cf0  \cf3 aVarName\cf0  \cf4 bVarName\cf0\par
+\par
+Faire la soustraction de deux nombres r\'e9els et la stocker dans une variable de type nombre r\'e9el\par
+\tab\cf2 sub\cf0  \cf1 storeVar\cf0  \cf3 aVarName\cf0  \cf4 bVarName\cf0\par
+\par
+Faire la multiplication de deux nombres r\'e9els et la stocker dans une variable de type nombre r\'e9el\par
+\tab\cf2 mult\cf0  \cf1 storeVar\cf0  \cf3 aVarName\cf0  \cf4 bVarName\cf0\par
+\par
+Faire la division de deux nombres r\'e9els et la stocker dans une variable de type nombre r\'e9el\par
+\tab\cf2 div\cf0  \cf1 storeVar\cf0  \cf3 aVarName\cf0  \cf4 bVarName\cf0\par
+\par
+Faire le modulo de deux nombres r\'e9els et la stocker dans une variable de type nombre r\'e9el\par
+\tab\cf2 mod\cf0  \cf1 storeVar\cf0  \cf3 aVarName\cf0  \cf4 bVarName\cf0\par
+\par
+Faire le quotient de la division euclidienne de deux nombres r\'e9els et la stocker dans une variable de type nombre r\'e9el\cf1\par
+\tab\cf2 ediv\cf0  \cf1 storeVar\cf0  \cf3 aVarName\cf0  \cf4 bVarName\cf1\par
+\par
+\par
+\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\cf0 G\'e9n\'e9rer une valeur enti\'e8re al\'e9atoire entre 0 et une limite et la stocker\par
+
+\pard\sl240\slmult1\tab\tab\cf2 irand\cf0  \cf1 var\cf0  \cf3 LimiteEnti\'e8re\cf0\par
+\par
+G\'e9n\'e9rer une valeur enti\'e8re al\'e9atoire entre une valeur seuil et une valeur limite \'e9tant \'e9gal \'e0 la valeur souhait\'e9 + le seuil et la stocker\par
+\tab\cf2 arand\cf0  \cf1 var\cf0  \cf3 SeuilEntier\cf0  \cf4 LimiteEnti\'e8re\cf0\par
+\par
+G\'e9n\'e9rer une valeur flottante al\'e9atoire et la stocker\cf1\par
+\tab\cf2 frand\cf0  \cf1 var\par
+\par
+\par
+\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\cf0 Demander \'e0 l'utilisateur d'entrer une valeur r\'e9elle\par
+
+\pard\sl240\slmult1\tab\tab\cf2 finput\cf0  \cf1 var\cf0\par
+\par
+Demander \'e0 l'utilisateur d'entrer une chaine valeur r\'e9elle avec un message personnalis\'e9\par
+\tab\cf2 mfinput\cf0  \cf1 var \cf3 MessagePersonnalis\'e9\cf0\par
+\par
+Demander \'e0 l'utilisateur d'entrer une chaine de caract\'e8re\par
+\tab\cf2 sinput\cf0  \cf1 var\cf0\par
+\par
+Demander \'e0 l'utilisateur d'entrer une chaine de caract\'e8re avec un message personnalis\'e9\par
+\cf1\tab\cf2 msinput\cf0  \cf1 var \cf3 MessagePersonnalis\'e9\cf1\par
+\par
+\par
+\par
+\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\cf0\lang1036 Faire un saut non conditionel \'e0 la ligne (premi\'e8re ligne du programme = ligne 1)\cf6\par
+
+\pard\cf0\tab\tab\cf2 jmp \cf1 ligne\cf3\par
+\par
+\cf0 Faire un saut conditionel \'e0 la ligne [sur les valeurs r\'e9elles] (premi\'e8re ligne du programme = ligne 1)\cf6\par
+\cf0\tab\cf2 cjmp \cf1 vara\cf3  condition\cf1  \cf4 varb \cf5 ligne\cf4\par
+\cf3\tab   = | != | =! | < | > | <= | =< | >= | =>\cf1\par
+\par
+\cf0 Faire un saut conditionel \'e0 la ligne [sur les chaine de caract\'e8re] (premi\'e8re ligne du programme = ligne 1)\cf6\par
+\cf0\tab\cf2 csjmp \cf1 vara\cf3  condition\cf1  \cf4 varb \cf5 ligne\cf4\par
+\tab   \cf3 = | != | =!\par
+
+\pard\sl240\slmult1\cf1\lang12\par
+\par
+\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\cf0 Convertir une variable en chaine de caract\'e8re et la stocker\par
+
+\pard\sl240\slmult1\tab\tab\cf2 vartostr\cf0  \cf1 variableAConvertir\cf0  \cf3 variableDeStockage\cf0\par
+\par
+Convertir une chaine de caract\'e8re en variable et la stocker\par
+    \cf2 strtovar\cf0  \cf1 variableDeStockage\cf0  \cf3 variableAConvertir\par
+\par
+\par
+\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\cf0 Cr\'e9er plusieurs variables de nombres r\'e9els en parall\'e8le\par
+
+\pard\sl240\slmult1\tab\tab\cf2 pvar\cf0  \cf1 Var1\cf0  \cf3 Var2\cf0  \cf2 =\cf0  \cf1 Val1\cf0  \cf3 Val2\cf0\par
+\tab\tab\cf2 pvar\cf0  \cf1 Var1\cf0  \cf3 Var2 \cf4 Var3\cf0  \cf2 =\cf0  \cf1 Val1\cf0  \cf3 Val2\cf0  \cf4 Val3\cf0\par
+\tab\tab\cf2 pvar\cf0  \cf1 Var1\cf0  \cf3 Var2 \cf4 Var3 \cf5 Var4\cf0  \cf2 =\cf0  \cf1 Val1\cf0  \cf3 Val2 \cf4 Val3 \cf5 Val4\cf0\par
+\par
+Assigner des valeurs en parall\'e8les \'e0 plusieurs variables de nombres r\'e9els\par
+\tab\cf2 pset\cf0  \cf1 Var1\cf0  \cf3 Var2\cf0  \cf2 =\cf0  \cf1 ValVarA\cf0  \cf3 ValVarB\cf0\par
+\tab\cf2 pset\cf0  \cf1 Var1\cf0  \cf3 Var2 \cf4 Var3 \cf2 =\cf0  \cf1 ValVarA\cf0  \cf3 ValVarB \cf4 ValVarC\cf0\par
+   \tab\cf2 pset\cf0  \cf1 Var1\cf0  \cf3 Var2 \cf4 Var3 \cf5 Var4 \cf2 =\cf0  \cf1 ValVarA\cf0  \cf3 ValVarB \cf4 ValVarC \cf5 ValVarD\cf0\par
+   \b Example\b0 : \cf2 pvar\cf0  \cf1 a\cf0  \cf3 b \cf4 c \cf2 =\cf0  \cf1 1\cf0  \cf3 2 \cf4 3\cf0\par
+   \tab\tab  \cf1 pset a \cf3 b \cf4 c\cf0  \cf2 =\cf0  \cf1 c\cf0  \cf3 a \cf4 b\cf0\par
+    \tab\b Result\b0 : \cf1 a = 3\cf0 ; \cf3 b = 1\cf0 ; \cf4 c = 2\cf0\par
+\par
+\par
+\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1 Cr\'e9er une liste de nombres r\'e9els\par
+
+\pard\sl240\slmult1\tab\tab\cf2 varlist\cf0  \cf1 listName\cf0  \cf3 valA valB valC val...\cf0\par
+\par
+Remplacer une valeur de type nombre r\'e9el par une valeur du m\'eame type \'e0 point donn\'e9 de la liste\par
+\tab\cf2 varlistset\cf0  \cf1 ListName \cf3 index \cf4 Value\cf0\par
+   \tab   \cf3 index: the first value in the list is at index 0 (index = 0)\par
+\cf0\par
+Modifier une liste existante en changeant l'enti\'e8ret\'e9 de son contenu\par
+\tab\cf2 varlistsetall\cf0  \cf1 listName \cf3 valA valB valC val...\cf0\par
+\par
+Ajouter \'e0 la derni\'e8re position d'une liste existante un nombre r\'e9el\par
+\tab\cf2 varlistadd \cf1 listName \cf3 value\cf0\par
+\par
+R\'e9cup\'e9rer la taille d'une liste et stocker cette valeur dans une variable\par
+\tab\cf2 varlistsize \cf1 listName \cf3 variableName\cf0\par
+\par
+Afficher le contenu d'une liste\par
+\tab\cf2 printvarlist \cf1 listName\cf0\par
+\par
+\cf1\par
+\cf0\f0\par
+}
+ 
