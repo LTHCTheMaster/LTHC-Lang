@@ -1,0 +1,24 @@
+var x 0
+var 0 0
+var 4 4
+var 180 180
+var 40500 40500
+var temp 0
+var temp2 0
+var temp3 0
+var result 0
+mfinput x Insere x en respectant 0 =< x =< 180
+cjmp x >= 0 13
+jmp 10
+cjmp x <= 180 15
+jmp 10
+sub temp 180 x
+mult temp temp x
+mult temp2 4 temp
+sub temp3 40500 temp
+div result temp2 temp3
+str base L'approximation de sin(x) est :
+str result
+vartostr result result
+stradd result base result
+printstr result

@@ -1,0 +1,12 @@
+pvar e v r = 0 10000 0
+irand r 40000
+add v v r
+mfinput e Give me a price
+cjmp v > e 8
+cjmp v < e 10
+cjmp v = e 12
+print +
+jmp 4
+print -
+jmp 4
+print Win

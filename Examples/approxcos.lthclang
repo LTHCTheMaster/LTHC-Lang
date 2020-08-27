@@ -1,0 +1,23 @@
+var x 0
+var 32400 32400
+var 4 4
+var 90 90
+var -90 -90
+var temp 0
+var temp2 0
+var result 0
+mfinput x Insere x en respectant -90 =< x =< 90
+cjmp x >= -90 12
+jmp 9
+cjmp x <= 90 14
+jmp 9
+mult x x x
+mult temp 4 x
+sub temp 32400 temp
+add temp2 32400 x
+div result temp temp2
+str base L'approximation de cos(x) est :
+str result
+vartostr result result
+stradd result base result
+printstr result
