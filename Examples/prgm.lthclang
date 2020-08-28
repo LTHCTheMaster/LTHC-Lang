@@ -1,0 +1,79 @@
+strl base1 Hello,
+str base2 You are a human! So come here and play with me.
+str intro
+stradd intro base1 base2
+str phrase1 Your pet's name is
+str name
+printstr intro
+msinput name Choose a name for your pet
+stradd phrase1 phrase1 name
+printstr phrase1
+str end_command >end
+str game1_command /more or less
+pvar estimation vitrine random = 0 10000 0
+irand random 40000
+add vitrine vitrine random
+str game2_command /calc
+str ope1 5 + x = 8
+str ope2 3 * x = 39
+str ope3 121 / x = 11
+pvar 3 13 11 random_ope = 3 13 11 0
+pvar 0 1 2 = 0 1 2
+var value_for_ope 0
+irand random_ope 3
+str command
+str command_base1 End Command :
+strl command_text1 >end
+str command_base2 First game command :
+str command_text2 /more or
+strl command_text2. less
+str command_base3 Second game command :
+strl command_text3 /calc
+stradd command command_base1 command_text1
+stradd command command command_base2
+stradd command command command_text2
+stradd command command command_text2.
+stradd command command command_base3
+stradd command command command_text3
+str command_line
+printstr command
+msinput command_line Enter a command
+csjmp command_line = end_command 79
+csjmp command_line = game1_command 45
+csjmp command_line = game2_command 59
+jmp 39
+set estimation 0
+set vitrine 10000
+irand random 40000
+add vitrine vitrine random
+mfinput estimation Give me a price
+cjmp vitrine > estimation 53
+cjmp vitrine < estimation 55
+cjmp vitrine = estimation 57
+print +++++
+jmp 49
+print -----
+jmp 49
+print Win
+jmp 39
+set value_for_ope 0
+irand random_ope 3
+cjmp random_ope = 0 64
+cjmp random_ope = 1 66
+cjmp random_ope = 2 68
+printstr ope1
+jmp 69
+printstr ope2
+jmp 69
+printstr ope3
+mfinput value_for_ope Give me the correct value
+cjmp random_ope = 0 73
+cjmp random_ope = 1 74
+cjmp random_ope = 2 75
+cjmp value_for_ope = 3 77
+cjmp value_for_ope = 13 77
+cjmp value_for_ope = 11 77
+jmp 69
+print Win
+jmp 39
+print Game is end
