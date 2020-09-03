@@ -1,0 +1,11 @@
+pvar a b c 1 = 1 0 10 1
+var 0 0
+printvar a
+add b a b
+printvar b
+add a a b
+printvar a
+sub c c 1
+cjmp c = 0 11
+jmp 4
+print End
