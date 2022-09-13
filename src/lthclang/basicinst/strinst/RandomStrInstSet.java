@@ -4,265 +4,143 @@ import java.util.Random;
 
 public class RandomStrInstSet 
 {
+	private int random;
+	private Random rand = new Random();
+	
 	public RandomStrInstSet() {
 		// TODO Auto-generated constructor stub
 	}
 	
 	public String randStr()
 	{
-		String str ="";
-		Random rand = new Random();
-		int random = 1 + rand.nextInt(62);
-		if(random == 1)
-		{
-			str = "a";
-		}
-		if(random == 2)
-		{
-			str = "b";
-		}
-		if(random == 3)
-		{
-			str = "c";
-		}
-		if(random == 4)
-		{
-			str = "d";
-		}
-		if(random == 5)
-		{
-			str = "e";
-		}
-		if(random == 6)
-		{
-			str = "f";
-		}
-		if(random == 7)
-		{
-			str = "g";
-		}
-		if(random == 8)
-		{
-			str = "h";
-		}
-		if(random == 9)
-		{
-			str = "i";
-		}
-		if(random == 10)
-		{
-			str = "j";
-		}
-		if(random == 11)
-		{
-			str = "k";
-		}
-		if(random == 12)
-		{
-			str = "l";
-		}
-		if(random == 13)
-		{
-			str = "m";
-		}
-		if(random == 14)
-		{
-			str = "n";
-		}
-		if(random == 15)
-		{
-			str = "o";
-		}
-		if(random == 16)
-		{
-			str = "p";
-		}
-		if(random == 17)
-		{
-			str = "q";
-		}
-		if(random == 18)
-		{
-			str = "r";
-		}
-		if(random == 19)
-		{
-			str = "s";
-		}
-		if(random == 20)
-		{
-			str = "t";
-		}
-		if(random == 21)
-		{
-			str = "u";
-		}
-		if(random == 22)
-		{
-			str = "v";
-		}
-		if(random == 23)
-		{
-			str = "w";
-		}
-		if(random == 24)
-		{
-			str = "x";
-		}
-		if(random == 25)
-		{
-			str = "y";
-		}
-		if(random == 26)
-		{
-			str = "z";
-		}
-		if(random == 27)
-		{
-			str = "A";
-		}
-		if(random == 28)
-		{
-			str = "B";
-		}
-		if(random == 29)
-		{
-			str = "C";
-		}
-		if(random == 30)
-		{
-			str = "D";
-		}
-		if(random == 31)
-		{
-			str = "E";
-		}
-		if(random == 32)
-		{
-			str = "F";
-		}
-		if(random == 33)
-		{
-			str = "G";
-		}
-		if(random == 34)
-		{
-			str = "H";
-		}
-		if(random == 35)
-		{
-			str = "I";
-		}
-		if(random == 36)
-		{
-			str = "J";
-		}
-		if(random == 37)
-		{
-			str = "K";
-		}
-		if(random == 38)
-		{
-			str = "L";
-		}
-		if(random == 39)
-		{
-			str = "M";
-		}
-		if(random == 40)
-		{
-			str = "N";
-		}
-		if(random == 41)
-		{
-			str = "O";
-		}
-		if(random == 42)
-		{
-			str = "P";
-		}
-		if(random == 43)
-		{
-			str = "Q";
-		}
-		if(random == 44)
-		{
-			str = "R";
-		}
-		if(random == 45)
-		{
-			str = "S";
-		}
-		if(random == 46)
-		{
-			str = "T";
-		}
-		if(random == 47)
-		{
-			str = "U";
-		}
-		if(random == 48)
-		{
-			str = "V";
-		}
-		if(random == 49)
-		{
-			str = "W";
-		}
-		if(random == 50)
-		{
-			str = "X";
-		}
-		if(random == 51)
-		{
-			str = "Y";
-		}
-		if(random == 52)
-		{
-			str = "Z";
-		}
-		if(random == 53)
-		{
-			str = "0";
-		}
-		if(random == 54)
-		{
-			str = "1";
-		}
-		if(random == 55)
-		{
-			str = "2";
-		}
-		if(random == 56)
-		{
-			str = "3";
-		}
-		if(random == 57)
-		{
-			str = "4";
-		}
-		if(random == 58)
-		{
-			str = "5";
-		}
-		if(random == 59)
-		{
-			str = "6";
-		}
-		if(random == 60)
-		{
-			str = "7";
-		}
-		if(random == 61)
-		{
-			str = "8";
-		}
-		if(random == 62)
-		{
-			str = "9";
-		}
+		random = 1 + rand.nextInt(62);
 		
-		return str;
+		switch (random) {
+			case 1:
+				return "a";
+			case 2:
+				return "b";
+			case 3:
+				return "c";
+			case 4:
+				return "d";
+			case 5:
+				return "e";
+			case 6:
+				return "f";
+			case 7:
+				return "g";
+			case 8:
+				return "h";
+			case 9:
+				return "i";
+			case 10:
+				return "j";
+			case 11:
+				return "k";
+			case 12:
+				return "l";
+			case 13:
+				return "m";
+			case 14:
+				return "n";
+			case 15:
+				return "o";
+			case 16:
+				return "p";
+			case 17:
+				return "q";
+			case 18:
+				return "r";
+			case 19:
+				return "s";
+			case 20:
+				return "t";
+			case 21:
+				return "u";
+			case 22:
+				return "v";
+			case 23:
+				return "w";
+			case 24:
+				return "x";
+			case 25:
+				return "y";
+			case 26:
+				return "z";
+			case 27:
+				return "A";
+			case 28:
+				return "B";
+			case 29:
+				return "C";
+			case 30:
+				return "D";
+			case 31:
+				return "E";
+			case 32:
+				return "F";
+			case 33:
+				return "G";
+			case 34:
+				return "H";
+			case 35:
+				return "I";
+			case 36:
+				return "J";
+			case 37:
+				return "K";
+			case 38:
+				return "L";
+			case 39:
+				return "M";
+			case 40:
+				return "N";
+			case 41:
+				return "O";
+			case 42:
+				return "P";
+			case 43:
+				return "Q";
+			case 44:
+				return "R";
+			case 45:
+				return "S";
+			case 46:
+				return "T";
+			case 47:
+				return "U";
+			case 48:
+				return "V";
+			case 49:
+				return "W";
+			case 50:
+				return "X";
+			case 51:
+				return "Y";
+			case 52:
+				return "Z";
+			case 53:
+				return "0";
+			case 54:
+				return "1";
+			case 55:
+				return "2";
+			case 56:
+				return "3";
+			case 57:
+				return "4";
+			case 58:
+				return "5";
+			case 59:
+				return "6";
+			case 60:
+				return "7";
+			case 61:
+				return "8";
+			default:
+				return "9";
+		}
 	}
 	
 	public String sRandStr(int size)

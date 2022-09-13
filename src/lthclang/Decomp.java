@@ -36,9 +36,10 @@ public class Decomp
 	public void executerMethod()
 	{
 		prgmdReader = null;
-		int index = 0;
-		while(index < prgm.size())
+		int index = -1;
+		while(index < prgm.size() - 1)
 		{
+			index++;
 			str = prgm.get(index);
 			splited = str.split(" ");
 			inst = splited[0];
@@ -52,6 +53,7 @@ public class Decomp
 				}
 				inst2 = inst2.replace("$n", "\n");
 				JOptionPane.showMessageDialog(null, inst2);
+				continue;
 			}
 			//Print with line Instruction
 			if(inst.equals("printl"))
@@ -62,6 +64,7 @@ public class Decomp
 					inst2 += splited[i] + "\n";
 				}
 				JOptionPane.showMessageDialog(null, inst2);
+				continue;
 			}
 			
 			//Create Var
@@ -73,12 +76,14 @@ public class Decomp
 					if(splited[1].equals(var.getName()))
 					{
 						isExist = 1;
+						break;
 					}
 				}
 				if(isExist == 0)
 				{
 					variable.add(new Var(splited[1].toLowerCase(), Float.parseFloat(splited[2])));
 				}
+				continue;
 			}
 			
 			//pvar
@@ -94,14 +99,12 @@ public class Decomp
 							if(splited[1].equals(var.getName()))
 							{
 								isExist = 1;
+								break;
 							}
 							if(splited[2].equals(var.getName()))
 							{
 								isExist = 1;
-							}
-							if(!(splited[3].equals("=")))
-							{
-								isExist = 1;
+								break;
 							}
 						}
 						if(splited.length == 8)
@@ -109,18 +112,17 @@ public class Decomp
 							if(splited[1].equals(var.getName()))
 							{
 								isExist = 1;
+								break;
 							}
 							if(splited[2].equals(var.getName()))
 							{
 								isExist = 1;
+								break;
 							}
 							if(splited[3].equals(var.getName()))
 							{
 								isExist = 1;
-							}
-							if(!(splited[4].equals("=")))
-							{
-								isExist = 1;
+								break;
 							}
 						}
 						if(splited.length == 10)
@@ -128,24 +130,38 @@ public class Decomp
 							if(splited[1].equals(var.getName()))
 							{
 								isExist = 1;
+								break;
 							}
 							if(splited[2].equals(var.getName()))
 							{
 								isExist = 1;
+								break;
 							}
 							if(splited[3].equals(var.getName()))
 							{
 								isExist = 1;
+								break;
 							}
 							if(splited[4].equals(var.getName()))
 							{
 								isExist = 1;
-							}
-							if(!(splited[5].equals("=")))
-							{
-								isExist = 1;
+								break;
 							}
 						}
+					}
+					if(splited.length == 6 && !(splited[3].equals("=")))
+					{
+						isExist = 1;
+						break;
+					}
+					if(splited.length == 8 && !(splited[4].equals("=")))
+					{
+						isExist = 1;
+						break;
+					}
+					if(splited.length == 10 && !(splited[5].equals("=")))
+					{
+						isExist = 1;
 					}
 				}
 				else
@@ -173,6 +189,7 @@ public class Decomp
 						variable.add(new Var(splited[4].toLowerCase(), Float.parseFloat(splited[9])));
 					}
 				}
+				continue;
 			}
 			
 			//PrintVar
@@ -183,8 +200,10 @@ public class Decomp
 					if(splited[1].equals(var.getName()))
 					{
 						JOptionPane.showMessageDialog(null, var.getValue());
+						break;
 					}
 				}
+				continue;
 			}
 			
 			//Add
@@ -203,12 +222,16 @@ public class Decomp
 									if(splited[3].equals(varb.getName()))
 									{
 										varstock.setValue(vara.getValue() + varb.getValue());
+										break;
 									}
 								}
+								break;
 							}
 						}
+						break;
 					}
 				}
+				continue;
 			}
 			
 			//Sub
@@ -227,12 +250,16 @@ public class Decomp
 									if(splited[3].equals(varb.getName()))
 									{
 										varstock.setValue(vara.getValue() - varb.getValue());
+										break;
 									}
 								}
+								break;
 							}
 						}
+						break;
 					}
 				}
+				continue;
 			}
 			
 			//Mult
@@ -251,12 +278,16 @@ public class Decomp
 									if(splited[3].equals(varb.getName()))
 									{
 										varstock.setValue(vara.getValue() * varb.getValue());
+										break;
 									}
 								}
+								break;
 							}
 						}
+						break;
 					}
 				}
+				continue;
 			}
 			
 			//Div
@@ -275,12 +306,16 @@ public class Decomp
 									if(splited[3].equals(varb.getName()))
 									{
 										varstock.setValue(vara.getValue() / varb.getValue());
+										break;
 									}
 								}
+								break;
 							}
 						}
+						break;
 					}
 				}
+				continue;
 			}
 			
 			//Mod
@@ -299,12 +334,16 @@ public class Decomp
 									if(splited[3].equals(varb.getName()))
 									{
 										varstock.setValue(vara.getValue() % varb.getValue());
+										break;
 									}
 								}
+								break;
 							}
 						}
+						break;
 					}
 				}
+				continue;
 			}
 			
 			//EDiv
@@ -323,12 +362,16 @@ public class Decomp
 									if(splited[3].equals(varb.getName()))
 									{
 										varstock.setValue((vara.getValue() - (vara.getValue() % varb.getValue())) / varb.getValue());
+										break;
 									}
 								}
+								break;
 							}
 						}
+						break;
 					}
 				}
+				continue;
 			}
 			
 			//Random Int Base
@@ -339,8 +382,10 @@ public class Decomp
 					if(splited[1].equals(var.getName()))
 					{
 						var.setValue(rand.randomInt(Integer.parseInt(splited[2])));
+						break;
 					}
 				}
+				continue;
 			}
 			
 			//Random Int Base With Adjust
@@ -351,8 +396,10 @@ public class Decomp
 					if(splited[1].equals(var.getName()))
 					{
 						var.setValue(rand.randomInt(Integer.parseInt(splited[2]), Integer.parseInt(splited[3])));
+						break;
 					}
 				}
+				continue;
 			}
 			
 			//Random Float 
@@ -363,8 +410,10 @@ public class Decomp
 					if(splited[1].equals(var.getName()))
 					{
 						var.setValue(rand.randomFloat());
+						break;
 					}
 				}
+				continue;
 			}
 			
 			//Float Input
@@ -375,8 +424,10 @@ public class Decomp
 					if(splited[1].equals(var.getName()))
 					{
 						var.setValue(floatIn.floatInput());
+						break;
 					}
 				}
+				continue;
 			}
 			//Float Input with custom message
 			if(inst.equals("mfinput"))
@@ -391,8 +442,10 @@ public class Decomp
 							inst2 += splited[i] + " ";
 						}
 						var.setValue(floatIn.cFloatInput(inst2));
+						break;
 					}
 				}
+				continue;
 			}
 			
 			//Set
@@ -403,8 +456,10 @@ public class Decomp
 					if(splited[1].equals(var.getName()))
 					{
 						var.setValue(Float.parseFloat(splited[2]));
+						break;
 					}
 				}
+				continue;
 			}
 			
 			//Str create
@@ -416,6 +471,7 @@ public class Decomp
 					if(splited[1].equals(var.getName()))
 					{
 						isExist = 1;
+						break;
 					}
 				}
 				if(isExist == 0)
@@ -428,6 +484,7 @@ public class Decomp
 					inst2 = inst2.replace("$n", "\n");
 					strVariable.add(new StrVar(splited[1], inst2));
 				}
+				continue;
 			}
 			//Strl create
 			if(inst.equals("strl"))
@@ -438,6 +495,7 @@ public class Decomp
 					if(splited[1].equals(var.getName()))
 					{
 						isExist = 1;
+						break;
 					}
 				}
 				if(isExist == 0)
@@ -449,6 +507,7 @@ public class Decomp
 					}
 					strVariable.add(new StrVar(splited[1], inst2));
 				}
+				continue;
 			}
 			
 			//PrintStr
@@ -459,8 +518,10 @@ public class Decomp
 					if(splited[1].equals(var.getName()))
 					{
 						JOptionPane.showMessageDialog(null, var.getValue());
+						break;
 					}
 				}
+				continue;
 			}
 			
 			//StrAdd
@@ -479,12 +540,16 @@ public class Decomp
 									if(splited[3].equals(varb.getName()))
 									{
 										varstock.setValue(vara.getValue() + varb.getValue());
+										break;
 									}
 								}
+								break;
 							}
 						}
+						break;
 					}
 				}
+				continue;
 			}
 				
 			//Str Input
@@ -495,8 +560,10 @@ public class Decomp
 					if(splited[1].equals(var.getName()))
 					{
 						var.setValue(strIn.strInput() + " ");
+						break;
 					}
 				}
+				continue;
 			}
 			//Str Input with custom message
 			if(inst.equals("msinput"))
@@ -511,8 +578,10 @@ public class Decomp
 							inst2 += splited[i] + " ";
 						}
 						var.setValue(strIn.cStrInput(inst2)+ " ");
+						break;
 					}
 				}
+				continue;
 			}
 			
 			//SetStr
@@ -529,8 +598,10 @@ public class Decomp
 						}
 						inst2 = inst2.replace("$n", "\n");
 						var.setValue(inst2);
+						break;
 					}
 				}
+				continue;
 			}
 			//SetStrl
 			if(inst.equals("setstrl"))
@@ -545,8 +616,10 @@ public class Decomp
 							inst2 += splited[i] + "\n";
 						}
 						var.setValue(inst2);
+						break;
 					}
 				}
+				continue;
 			}
 			
 			//Random Str
@@ -557,8 +630,10 @@ public class Decomp
 					if(splited[1].equals(var.getName()))
 					{
 						var.setValue(strRand.randStr());
+						break;
 					}
 				}
+				continue;
 			}
 			
 			//Random Str with Size
@@ -569,14 +644,17 @@ public class Decomp
 					if(splited[1].equals(var.getName()))
 					{
 						var.setValue(strRand.sRandStr(Integer.parseInt(splited[2])));
+						break;
 					}
 				}
+				continue;
 			}
 			
 			//Unconditional Jump
 			if(inst.equals("jmp"))
 			{
 				index = Integer.parseInt(splited[1]) - 2;
+				continue;
 			}
 			
 			//Conditional Jump [on float]
@@ -596,6 +674,7 @@ public class Decomp
 									{
 										index = Integer.parseInt(splited[4]) - 2;
 									}
+									break;
 								}
 								if(splited[2].equals("<"))
 								{
@@ -603,6 +682,7 @@ public class Decomp
 									{
 										index = Integer.parseInt(splited[4]) - 2;
 									}
+									break;
 								}
 								if(splited[2].equals(">"))
 								{
@@ -610,6 +690,7 @@ public class Decomp
 									{
 										index = Integer.parseInt(splited[4]) - 2;
 									}
+									break;
 								}
 								if(splited[2].equals("!=") || splited[2].equals("=!"))
 								{
@@ -617,6 +698,7 @@ public class Decomp
 									{
 										index = Integer.parseInt(splited[4]) - 2;
 									}
+									break;
 								}
 								if(splited[2].equals("<=") || splited[2].equals("=<"))
 								{
@@ -624,6 +706,7 @@ public class Decomp
 									{
 										index = Integer.parseInt(splited[4]) - 2;
 									}
+									break;
 								}
 								if(splited[2].equals(">=") || splited[2].equals("=>"))
 								{
@@ -631,11 +714,14 @@ public class Decomp
 									{
 										index = Integer.parseInt(splited[4]) - 2;
 									}
+									break;
 								}
 							}
 						}
+						break;
 					}
 				}
+				continue;
 			}
 			
 			//Conditional Jump [on str]
@@ -657,6 +743,7 @@ public class Decomp
 									{
 										index = Integer.parseInt(splited[4]) - 2;
 									}
+									break;
 								}
 								if(splited[2].equals("!="))
 								{
@@ -666,6 +753,7 @@ public class Decomp
 									{
 										index = Integer.parseInt(splited[4]) - 2;
 									}
+									break;
 								}
 								if(splited[2].equals("=!"))
 								{
@@ -675,11 +763,14 @@ public class Decomp
 									{
 										index = Integer.parseInt(splited[4]) - 2;
 									}
+									break;
 								}
 							}
 						}
+						break;
 					}
 				}
+				continue;
 			}
 			
 			//Convert float to str
@@ -694,10 +785,13 @@ public class Decomp
 							if(splited[2].equals(strvar.getName()))
 							{
 								strvar.setValue(var.getValueStr());
+								break;
 							}
 						}
+						break;
 					}
 				}
+				continue;
 			}
 			//Convert str to float
 			if(inst.equals("strtovar"))
@@ -711,10 +805,13 @@ public class Decomp
 							if(splited[2].equals(strvar.getName()))
 							{
 								var.setValue(Float.parseFloat(strvar.getValue()));
+								break;
 							}
 						}
+						break;
 					}
 				}
+				continue;
 			}
 			
 			//varlist
@@ -726,6 +823,7 @@ public class Decomp
 					if(splited[1].equals(list.getName()))
 					{
 						isExist = 1;
+						break;
 					}
 				}
 				if(isExist == 0)
@@ -737,6 +835,7 @@ public class Decomp
 					}
 					variableList.add(new ListVar(splited[1], templist));
 				}
+				continue;
 			}
 			//varlistset
 			if(inst.equals("varlistset"))
@@ -746,8 +845,10 @@ public class Decomp
 					if(splited[1].equals(list.getName()))
 					{
 						list.setInList(Integer.parseInt(splited[2]), Float.parseFloat(splited[3]));
+						break;
 					}
 				}
+				continue;
 			}
 			//varlistsetall
 			if(inst.equals("varlistsetall"))
@@ -762,8 +863,10 @@ public class Decomp
 							templist.add(Float.parseFloat(splited[i]));
 						}
 						list.setAllInList(templist);
+						break;
 					}
 				}
+				continue;
 			}
 			//varlistadd
 			if(inst.equals("varlistadd"))
@@ -773,8 +876,10 @@ public class Decomp
 					if(splited[1].equals(list.getName()))
 					{
 						list.addAtEndOfList(Float.parseFloat(splited[2]));
+						break;
 					}
 				}
+				continue;
 			}
 			//varlistaddv
 			if(inst.equals("varlistaddv"))
@@ -788,10 +893,13 @@ public class Decomp
 							if(splited[2].equals(var.getName()))
 							{
 								list.addAtEndOfList(var.getValue());
+								break;
 							}
 						}
+						break;
 					}
 				}
+				continue;
 			}
 			//varlistremoveat
 			if(inst.equals("varlistremoveat"))
@@ -801,8 +909,10 @@ public class Decomp
 					if(splited[1].equals(list.getName()))
 					{
 						list.removeAt(Integer.parseInt(splited[2]));
+						break;
 					}
 				}
+				continue;
 			}
 			
 			//pset
@@ -1031,6 +1141,7 @@ public class Decomp
 						}
 					}
 				}
+				continue;
 			}
 			
 			//varlistsize
@@ -1045,10 +1156,13 @@ public class Decomp
 							if(splited[2].equals(var.getName()))
 							{
 								var.setValue(list.getList().size());
+								break;
 							}
 						}
+						break;
 					}
 				}
+				continue;
 			}
 			//printvarlist
 			if(inst.equals("printvarlist"))
@@ -1063,11 +1177,11 @@ public class Decomp
 							out += list.getList().get(i).toString() + "\n";
 						}
 						JOptionPane.showMessageDialog(null, out);
+						break;
 					}
 				}
+				continue;
 			}
-			
-			index++;
 		}
 	}
 }

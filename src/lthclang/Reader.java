@@ -31,6 +31,7 @@ public class Reader
 					String str;
 					while((str = br.readLine()) != null)
 					{
+						if (str.equalsIgnoreCase("\n")) continue;
 						prgm.add(str);
 					}
 					br.close();
