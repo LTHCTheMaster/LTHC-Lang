@@ -6,5 +6,4 @@ public class Main {
 		Decomp decomp = new Decomp();
 		decomp.executerMethod();
 	}
-
 }

@@ -33,6 +33,10 @@ public class Decomp
 	
 	private String inst2 = "";
 	
+	public Decomp() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public void executerMethod()
 	{
 		prgmdReader = null;

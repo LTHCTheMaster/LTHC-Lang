@@ -21,8 +21,8 @@ public class ListVar
 	
 	public void setAllInList(List<Float> list)
 	{
-		this.list.removeAll(getList());
-		this.list = list;
+		this.list.removeAll(this.list);
+		this.list.addAll(list);
 	}
 	public void setInList(int index, float value)
 	{

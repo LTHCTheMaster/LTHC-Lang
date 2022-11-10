@@ -13,130 +13,130 @@ public class RandomStrInstSet
 	
 	public String randStr()
 	{
-		random = 1 + rand.nextInt(62);
+		random = rand.nextInt(62);
 		
 		switch (random) {
-			case 1:
+			case 0:
 				return "a";
-			case 2:
+			case 1:
 				return "b";
-			case 3:
+			case 2:
 				return "c";
-			case 4:
+			case 3:
 				return "d";
-			case 5:
+			case 4:
 				return "e";
-			case 6:
+			case 5:
 				return "f";
-			case 7:
+			case 6:
 				return "g";
-			case 8:
+			case 7:
 				return "h";
-			case 9:
+			case 8:
 				return "i";
-			case 10:
+			case 9:
 				return "j";
-			case 11:
+			case 10:
 				return "k";
-			case 12:
+			case 11:
 				return "l";
-			case 13:
+			case 12:
 				return "m";
-			case 14:
+			case 13:
 				return "n";
-			case 15:
+			case 14:
 				return "o";
-			case 16:
+			case 15:
 				return "p";
-			case 17:
+			case 16:
 				return "q";
-			case 18:
+			case 17:
 				return "r";
-			case 19:
+			case 18:
 				return "s";
-			case 20:
+			case 19:
 				return "t";
-			case 21:
+			case 20:
 				return "u";
-			case 22:
+			case 21:
 				return "v";
-			case 23:
+			case 22:
 				return "w";
-			case 24:
+			case 23:
 				return "x";
-			case 25:
+			case 24:
 				return "y";
-			case 26:
+			case 25:
 				return "z";
-			case 27:
+			case 26:
 				return "A";
-			case 28:
+			case 27:
 				return "B";
-			case 29:
+			case 28:
 				return "C";
-			case 30:
+			case 29:
 				return "D";
-			case 31:
+			case 30:
 				return "E";
-			case 32:
+			case 31:
 				return "F";
-			case 33:
+			case 32:
 				return "G";
-			case 34:
+			case 33:
 				return "H";
-			case 35:
+			case 34:
 				return "I";
-			case 36:
+			case 35:
 				return "J";
-			case 37:
+			case 36:
 				return "K";
-			case 38:
+			case 37:
 				return "L";
-			case 39:
+			case 38:
 				return "M";
-			case 40:
+			case 39:
 				return "N";
-			case 41:
+			case 40:
 				return "O";
-			case 42:
+			case 41:
 				return "P";
-			case 43:
+			case 42:
 				return "Q";
-			case 44:
+			case 43:
 				return "R";
-			case 45:
+			case 44:
 				return "S";
-			case 46:
+			case 45:
 				return "T";
-			case 47:
+			case 46:
 				return "U";
-			case 48:
+			case 47:
 				return "V";
-			case 49:
+			case 48:
 				return "W";
-			case 50:
+			case 49:
 				return "X";
-			case 51:
+			case 50:
 				return "Y";
-			case 52:
+			case 51:
 				return "Z";
-			case 53:
+			case 52:
 				return "0";
-			case 54:
+			case 53:
 				return "1";
-			case 55:
+			case 54:
 				return "2";
-			case 56:
+			case 55:
 				return "3";
-			case 57:
+			case 56:
 				return "4";
-			case 58:
+			case 57:
 				return "5";
-			case 59:
+			case 58:
 				return "6";
-			case 60:
+			case 59:
 				return "7";
-			case 61:
+			case 60:
 				return "8";
 			default:
 				return "9";
